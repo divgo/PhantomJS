@@ -1,0 +1,58 @@
+{
+    "url":"https://www.domainname.com",
+    "steps": [
+        {
+            "name":"step1",
+            "fields": [
+                {"id":"UserName", "value":"username"},
+                {"id":"Password", "value":"password value"},
+                {"id":"Other_Field_ID", "value":"Other Field Value"}
+            ],
+            "actions": [
+                {"selector":"#btnLogin", "action":"click"}
+            ]
+        },
+        {
+            "name":"step2",
+            "target_frame":"banner",
+            "actions": [
+                {"selector":"a.tablink:eq(1)", "action":"click"}
+            ]
+        },
+        {
+            "name":"step3",
+            "target_frame":"banner",
+            "actions": [
+                {"selector":"a.tablink:eq(2)", "action":"click"}
+            ]
+        },
+        {
+            "name":"step4",
+            "target_frame":"banner",
+            "actions": [
+                {"selector":"a.tablink:eq(3)", "action":"click"}
+            ]
+        },
+        {
+            "name":"step5",
+            "target_frame":"banner",
+            "actions": [
+                {"selector":"a.tablink:eq(4)", "action":"click"}
+            ]
+        },
+        {
+            "name":"step6",
+            "target_frame":"banner",
+            "actions": [
+                {"selector":"a.tablink:eq(6)", "action":"click"}
+            ]
+        },
+        {
+            "name":"step7",
+            "target_frame":"banner",
+            "actions": [
+                {"selector":"a.tablink:eq(7)", "action":"click"}
+            ]
+        }
+    ]
+}
