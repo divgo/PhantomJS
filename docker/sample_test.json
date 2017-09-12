@@ -1,0 +1,46 @@
+{
+    "url":"http[s]://www.your-test-site.com",
+    "steps": [
+        {
+            "name":"a meaningful step name",
+            "description":"Enter a value in each of 2 fields, then click the login button",
+            "fields": [
+                {"name":"LoginForm_Login", "value":"your_value"},
+                {"name":"LoginForm_Password", "value":"your_value"}
+            ],
+            "actions": [
+                {"name":"login", "action":"click"}
+            ]
+        },
+        {
+            "name":"find object by CSS Classname",
+            "description":"Click a link with a css classname of 'link'. targetIndex tells phantom to click the 17th link with the css class",
+            "actions": [
+                {"classname":"link", "targetIndex":17, "action":"click"}
+            ]
+        },
+        {
+            "name":"another step name",
+            "description":"Upload File by intercepting the File Picker dialog and forcing a local file",
+            "actions": [
+                {"name":"importFile","action":"click","content":"C:\\scm\\PhantomJS\\Sample.zip"},
+                {"name":"upload","action":"click", "wait":2000}
+            ]
+        },
+        {
+            "name":"complex selectors",
+            "description":"use a more complex selector to find the target element in the DOM. wait 1 second before performing the next action",
+            "actions": [
+                {"selector":"input[value='Offshore-Team.zip']","action":"click"},
+                {"name":"confirmimport","action":"click", "wait":1000}
+            ]
+        },
+        {
+            "name":"a waiting step",
+            "description":"wait for 1 second ( 1000 milliseconds ) before clicking the confirmimport button",
+            "actions": [
+                {"name":"confirmimport","action":"click", "wait":1000}
+            ]
+        }
+    ]
+}
